@@ -4,13 +4,17 @@ class Student
 
   attr_accessor :name, :grade, :id
 
-  def initialize(name, grade, id = nil)
+  def initialize( id = nil, name, grade)
     @name = name
     @grade = grade
   end
 
   def self.create(name, grade)
     self.new(name, grade).save
+  end
+
+  def self.new_from_db
+    
   end
 
   def self.create_table
