@@ -10,7 +10,7 @@ class Student
   end
 
   def self.create(name, grade)
-    self.new(name, grade).save
+    self.new(name, grade).tap { |s| s.save }
   end
 
   def self.new_from_db(row)
