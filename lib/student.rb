@@ -23,7 +23,7 @@ class Student
     SQL
 
     result = DB[:conn].execute(sql, name)[0]
-    Song.new(result[0], result[1], result[2])
+    Student.new(result[0], result[1], result[2])
   end
 
   def self.create_table
